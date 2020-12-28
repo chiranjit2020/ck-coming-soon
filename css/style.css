@@ -1,0 +1,26 @@
+@import 'utility.css';
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/coming-soon-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main .brand-block {
+    width: 200px;
+}
+
+.main #countdown-box .count {
+    margin: 0 3rem;
+}
+
+.main #countdown-box .count h2 {
+    font-size: 5rem;
+}
+
+form {
+    width: 30rem;
+}
