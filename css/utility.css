@@ -51,8 +51,76 @@ ol {
     height: auto;
 }
 
-.container {
+.bin {
     max-width: 114rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media screen and (max-width: 700px) {
+    .bin {
+        max-width: 100%;
+
+    }
+}
+
+/* For desktop: */
+.leg-1 {
+    width: 8.33%;
+}
+
+.leg-2 {
+    width: 16.66%;
+}
+
+.leg-3 {
+    width: 25%;
+}
+
+.leg-4 {
+    width: 33.33%;
+}
+
+.leg-5 {
+    width: 41.66%;
+}
+
+.leg-6 {
+    width: 50%;
+}
+
+.leg-7 {
+    width: 58.33%;
+}
+
+.leg-8 {
+    width: 66.66%;
+}
+
+.leg-9 {
+    width: 75%;
+}
+
+.leg-10 {
+    width: 83.33%;
+}
+
+.leg-11 {
+    width: 91.66%;
+}
+
+.leg-12 {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* For mobile phones: */
+    [class*="leg-"] {
+        width: 100%;
+    }
 }
 
 .text-center {
@@ -88,6 +156,14 @@ ol {
     justify-content: flex-end;
 }
 
+.jcsb {
+    justify-content: space-between;
+}
+
+.jcsa {
+    justify-content: space-around;
+}
+
 .aic {
     align-items: center;
 }
@@ -108,6 +184,8 @@ ol {
     flex-direction: row;
 }
 
+/*Margin*/
+/*Margin 50px*/
 .mt-5 {
     margin-top: 5rem;
 }
@@ -124,6 +202,24 @@ ol {
     margin-bottom: 5rem;
 }
 
+/* Margin 40px*/
+.mt-4 {
+    margin-top: 4rem;
+}
+
+.mb-4 {
+    margin-bottom: 4rem;
+}
+
+.mr-4 {
+    margin-top: 4rem;
+}
+
+.ml-4 {
+    margin-bottom: 4rem;
+}
+
+/*Margin 30px */
 .mt-3 {
     margin-top: 3rem;
 }
@@ -140,24 +236,139 @@ ol {
     margin-bottom: 3rem;
 }
 
+/*Margin 20px */
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mr-2 {
+    margin-top: 2rem;
+}
+
+.ml-2 {
+    margin-bottom: 2rem;
+}
+
+/*Padding*/
+/*Padding 50px*/
+.pt-5 {
+    margin-top: 5rem;
+}
+
+.pb-5 {
+    margin-bottom: 5rem;
+}
+
+.pr-5 {
+    margin-top: 5rem;
+}
+
+.pl-5 {
+    margin-bottom: 5rem;
+}
+
+/*Padding 40px*/
+.pt-4 {
+    margin-top: 4rem;
+}
+
+.pb-4 {
+    margin-bottom: 4rem;
+}
+
+.pr-4 {
+    margin-top: 4rem;
+}
+
+.pl-4 {
+    margin-bottom: 4rem;
+}
+
+/*Padding 30px*/
+.pt-3 {
+    margin-top: 3rem;
+}
+
+.pb-3 {
+    margin-bottom: 3rem;
+}
+
+.pr-3 {
+    margin-top: 3rem;
+}
+
+.pl-3 {
+    margin-bottom: 3rem;
+}
+
+/*Padding 20px*/
+.pt-2 {
+    margin-top: 2rem;
+}
+
+.pb-2 {
+    margin-bottom: 2rem;
+}
+
+.pr-2 {
+    margin-top: 2rem;
+}
+
+.pl-2 {
+    margin-bottom: 2rem;
+}
 
 
 .form-control {
-    width: 70%;
+    font-family: var(--primary-font);
+    font-size: 1.4rem;
+    color: var(--black);
+    line-height: 1.3;
+    font-weight: 500;
+    width: 100%;
     padding: .5rem 1rem;
-    background-color: rgba(255, 255, 255, .2);
-    border: .1rem solid #222;
+    background-color: var(--off-white);
+    border: .1rem solid var(--off-white);
+}
+
+.form-control.glass {
+    border-right: none;
+    color: #fff;
+}
+
+.form-control.glass:focus {
+    border: 1px solid var(--accent-color);
+    outline: none;
+}
+
+.form-control.glass ~ .btn {
+    border-radius: 0 .3rem .3rem 0;
 }
 
 .btn {
-    background-color: var(--off-white);
+    font-family: var(--primary-font);
+    font-size: 1.4rem;
     color: var(--black);
-    padding: .5rem 1.5rem;
+    line-height: 1.3;
+    font-weight: 500;
+    background-color: var(--off-white);
+    padding: .5rem 1.2rem;
     margin: 0;
     border: none;
     border-radius: .3rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
 }
 
 .glass {
     backdrop-filter: blur(3rem);
+    background-color: rgba(255, 255, 255, .2);
 }

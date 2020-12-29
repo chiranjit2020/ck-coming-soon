@@ -46,3 +46,16 @@ function isMobile() {
         return false;
     }
 }
+
+
+// Oneline-submit
+const onelineSubmit = document.querySelector('.oneline-submit');
+const onelineSubmitInput = document.querySelector('.oneline-submit .form-control');
+const onelineSubmitBtn = document.querySelector('.oneline-submit .btn');
+const onelineSubmitWidth = onelineSubmit.scrollWidth;
+const inputWidth = onelineSubmitInput.scrollWidth;
+const btnWidth = onelineSubmitBtn.scrollWidth;
+const btnHeight = onelineSubmitBtn.scrollHeight;
+
+onelineSubmitInput.style.height = `${btnHeight}px`;
+//onelineSubmitBtn.style.width = `calc(${onelineSubmitWidth}px * (20/100))`;
