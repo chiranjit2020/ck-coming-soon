@@ -60,6 +60,26 @@ form .oneline-submit .btn {
     transform: translateX(-50%);
 }
 
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 55%;
+
+    }
+
+    form .oneline-submit {
+        width: 90vw;
+    }
+
+    form .oneline-submit .form-control {
+        width: 70%;
+    }
+
+    form .oneline-submit .btn {
+        width: 30%;
+    }
+}
+
 @media screen and (max-width: 400px) {
     html {
         font-size: 55%;
