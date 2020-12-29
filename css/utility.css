@@ -372,3 +372,22 @@ ol {
     backdrop-filter: blur(3rem);
     background-color: rgba(255, 255, 255, .2);
 }
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 55%;
+
+    }
+
+    form .oneline-submit {
+        width: 90vw;
+    }
+
+    form .oneline-submit .form-control {
+        width: 70%;
+    }
+
+    form .oneline-submit .btn {
+        width: 30%;
+    }
+}

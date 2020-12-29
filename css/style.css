@@ -21,8 +21,13 @@
     font-size: 5rem;
 }
 
+p {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
 form .oneline-submit {
-    width: 55rem;
+    width: 30vw;
 }
 
 
@@ -53,4 +58,23 @@ form .oneline-submit .btn {
     left: 50%;
     bottom: -1rem;
     transform: translateX(-50%);
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 55%;
+
+    }
+
+    form .oneline-submit {
+        width: 90vw;
+    }
+
+    form .oneline-submit .form-control {
+        width: 70%;
+    }
+
+    form .oneline-submit .btn {
+        width: 30%;
+    }
 }
