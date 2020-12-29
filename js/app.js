@@ -48,14 +48,36 @@ function isMobile() {
 }
 
 
-// Oneline-submit
+// Oneline-submit From Dynamic Height/ Width
 const onelineSubmit = document.querySelector('.oneline-submit');
 const onelineSubmitInput = document.querySelector('.oneline-submit .form-control');
 const onelineSubmitBtn = document.querySelector('.oneline-submit .btn');
 const onelineSubmitWidth = onelineSubmit.scrollWidth;
 const inputWidth = onelineSubmitInput.scrollWidth;
+const inputHeight = onelineSubmitInput.scrollHeight;
 const btnWidth = onelineSubmitBtn.scrollWidth;
 const btnHeight = onelineSubmitBtn.scrollHeight;
 
 onelineSubmitInput.style.height = `${btnHeight}px`;
-//onelineSubmitBtn.style.width = `calc(${onelineSubmitWidth}px * (20/100))`;
+onelineSubmitInput.style.width = `calc(${onelineSubmitWidth}px - ${btnWidth}px`;
+
+//Subscibe JS
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyD4HG46T-4Pik07FGjCsI0aU249wwS3oHSEX1bn94DI_w_WNi0/exec';
+const form = document.forms['submit-to-google-sheet'];
+let date = form.querySelector('input[name="date"]');
+
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    date.value = new Date();
+    fetch(scriptURL, {
+            method: 'POST',
+            body: new FormData(form)
+        })
+        .then(response => console.log('✓', response))
+        .catch(error => console.error('!', error.message))
+
+    onelineSubmitInput.value = '';
+})

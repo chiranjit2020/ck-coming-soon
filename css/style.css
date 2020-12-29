@@ -17,6 +17,7 @@
     margin: 0 3rem;
 }
 
+
 .main #countdown-box .count h2 {
     font-size: 5rem;
 }
@@ -24,19 +25,6 @@
 p {
     font-size: 1.8rem;
     text-align: center;
-}
-
-form .oneline-submit {
-    width: 30vw;
-}
-
-
-form .oneline-submit .form-control {
-    width: 80%;
-}
-
-form .oneline-submit .btn {
-    width: 20%;
 }
 
 .social-icons ul li a {
@@ -56,44 +44,17 @@ form .oneline-submit .btn {
     font-size: 1.1rem;
     position: absolute;
     left: 50%;
-    bottom: -1rem;
+    bottom: -3rem;
     transform: translateX(-50%);
+    padding: .5rem;
+    background-color: var(--off-white);
+    color: var(--black);
+    border-radius: .5rem;
 }
 
 
 @media screen and (max-width: 500px) {
     html {
         font-size: 55%;
-    }
-
-    form .oneline-submit {
-        width: 90vw;
-    }
-
-    form .oneline-submit .form-control {
-        width: 70%;
-    }
-
-    form .oneline-submit .btn {
-        width: 30%;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    html {
-        font-size: 55%;
-
-    }
-
-    form .oneline-submit {
-        width: 90vw;
-    }
-
-    form .oneline-submit .form-control {
-        width: 70%;
-    }
-
-    form .oneline-submit .btn {
-        width: 30%;
     }
 }
