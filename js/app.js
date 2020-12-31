@@ -77,13 +77,20 @@ form.addEventListener('submit', e => {
             body: new FormData(form)
         })
         .then(response => {
-            const msg = document.querySelector('.msg');
+            let msg = document.querySelector('.msg');
             msg.innerHTML = `Thank you for subscribing! <i class='bx bxs-like'></i>`;
             setTimeout(() => {
                 msg.innerHTML = '';
             }, 3000);
         })
-        .catch(error => console.error('!', error.message))
+        .catch(error => {
+            let err = document.querySelector('.error');
+            err.innerHTML = error.message + "<i class='bx bx-sad' ></i>";
+            setTimeout(() => {
+                err.innerHTML = '';
+            }, 3000);
+
+        })
 
     onelineSubmitInput.value = '';
 })
