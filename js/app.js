@@ -76,7 +76,13 @@ form.addEventListener('submit', e => {
             method: 'POST',
             body: new FormData(form)
         })
-        .then(response => console.log('✓', response))
+        .then(response => {
+            const msg = document.querySelector('.msg');
+            msg.innerHTML = `Thank you for subscribing! <i class='bx bxs-like'></i>`;
+            setTimeout(() => {
+                msg.innerHTML = '';
+            }, 3000);
+        })
         .catch(error => console.error('!', error.message))
 
     onelineSubmitInput.value = '';
