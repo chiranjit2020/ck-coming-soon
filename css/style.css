@@ -33,7 +33,7 @@ form p.msg{
     line-height: 1.3;
     margin-top: 1rem;
 }
-form p.error{
+form p.msg.error{
     color: #ff1100;
 }
 .social-icons ul li a {
