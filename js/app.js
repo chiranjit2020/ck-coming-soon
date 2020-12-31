@@ -78,6 +78,7 @@ form.addEventListener('submit', e => {
         })
         .then(response => {
             let msg = document.querySelector('.msg');
+            msg.style.display = 'block';
             msg.innerHTML = `Thank you for subscribing! <i class='bx bxs-like'></i>`;
             setTimeout(() => {
                 msg.innerHTML = '';
@@ -85,6 +86,7 @@ form.addEventListener('submit', e => {
         })
         .catch(error => {
             let err = document.querySelector('.error');
+            err.style.display = 'block';
             err.innerHTML = error.message + "<i class='bx bx-sad' ></i>";
             setTimeout(() => {
                 err.innerHTML = '';

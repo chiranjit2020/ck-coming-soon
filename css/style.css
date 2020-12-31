@@ -28,13 +28,18 @@ p.para {
 }
 
 form p.msg{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--accent-color);
     line-height: 1.3;
     margin-top: 1rem;
+    display: none;
 }
-form p.msg.error{
+form p.error{
+    font-size: 1.2rem;
     color: #ff1100;
+    line-height: 1.3;
+    margin-top: 1rem;
+    display: none;
 }
 .social-icons ul li a {
     color: var(--off-white);
